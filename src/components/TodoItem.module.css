@@ -1,0 +1,91 @@
+/* 할 일 한 줄 전체를 감싸는 박스 */
+.itemWrapper {
+  display: flex; /* 가로로 나란히 배치 */
+  align-items: center; /* 세로 가운데 정렬 */
+  justify-content: space-between; /* 양쪽 끝 정렬 */
+  padding: 12px; /* 안쪽 여백 */
+  border-bottom: 1px solid #eee; /* 아래쪽 연한 선 */
+  transition: all 0.3s ease; /* 부드러운 전환 효과 */
+  opacity: 1; /* 기본 투명도 */
+}
+
+/* 마우스를 올렸을 때 그림자 효과 */
+.itemWrapper:hover {
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.12);
+}
+
+/* 할 일 텍스트 스타일 */
+.text {
+  flex-grow: 1; /* 남은 공간 모두 차지 */
+  font-size: 17px; /* 글자 크기 */
+  font-weight: 500; /* 글자 두께 */
+  color: #2c3e50; /* 글자색 */
+  margin-right: 20px; /* 오른쪽 여백 */
+  user-select: none; /* 드래그 방지 */
+}
+
+/* 완료된 할 일 텍스트 스타일 */
+.completed {
+  color: #a0a9b8; /* 연한 회색 */
+  text-decoration: line-through; /* 취소선 */
+  font-style: italic; /* 이탤릭체 */
+}
+
+/* 완료된 할 일 전체 줄 스타일 */
+.completedItem {
+  opacity: 0.6; /* 투명하게 */
+  transform: scale(0.98); /* 살짝 작게 */
+}
+
+/* 버튼(완료/삭제) 스타일 */
+.button {
+  background-color: #e84a4a; /* 빨간 배경 */
+  border: none; /* 테두리 없음 */
+  border-radius: 14px; /* 둥근 테두리 */
+  color: white; /* 글자색 */
+  padding: 10px 14px; /* 안쪽 여백 */
+  cursor: pointer; /* 마우스 오버 시 손가락 모양 */
+  font-weight: 600; /* 굵은 글씨 */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none; /* 드래그 방지 */
+  box-shadow: 0 4px 10px rgba(244, 67, 54, 0.3); /* 그림자 */
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+.button:hover {
+  background-color: #c0392b; /* 더 진한 빨간색 */
+  transform: translateY(-1px); /* 위로 살짝 이동 */
+  box-shadow: 0 6px 15px rgba(211, 47, 47, 0.45); /* 그림자 진하게 */
+}
+
+/* 버튼을 클릭했을 때 */
+.button:active {
+  transform: translateY(0); /* 원래 위치로 */
+  box-shadow: 0 3px 8px rgba(211, 47, 47, 0.2); /* 그림자 약하게 */
+}
+
+/* 편집 input(수정 모드) 스타일 */
+.editInput {
+  flex: 1; /* 남은 공간 모두 차지 */
+  font-size: 16px; /* 글자 크기 */
+  padding: 6px 8px; /* 안쪽 여백 */
+  border: 2px solid #4a90e2; /* 파란 테두리 */
+  border-radius: 4px; /* 둥근 테두리 */
+  outline: none; /* 기본 테두리 제거 */
+  transition: box-shadow 0.2s ease; /* 부드러운 전환 */
+}
+
+/* 편집 input에 포커스(클릭)했을 때 */
+.editInput:focus {
+  box-shadow: 0 0 8px #4a90e2; /* 파란 그림자 */
+}
+
+/* 우선순위 점(색상 원) 스타일 */
+.priorityDot {
+  display: inline-block; /* 인라인 블록 */
+  width: 12px; /* 원 크기 */
+  height: 12px;
+  border-radius: 50%; /* 완전한 원 */
+  margin-right: 12px; /* 오른쪽 여백 */
+  vertical-align: middle; /* 세로 가운데 정렬 */
+}

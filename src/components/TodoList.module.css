@@ -1,0 +1,21 @@
+/* 할 일 리스트 전체를 감싸는 박스 스타일 */
+.listWrapper {
+  width: 100%; /* 가로 전체 사용 */
+  max-width: 480px; /* 최대 너비 제한 */
+  background: #ffffffdd; /* 흰색, 약간 투명 */
+  border-radius: 16px; /* 모서리 둥글게 */
+  box-shadow: 0 8px 30px rgba(44, 62, 80, 0.08); /* 그림자 효과 */
+  padding: 20px 28px; /* 안쪽 여백 */
+  backdrop-filter: saturate(180%) blur(8px); /* 배경 흐림 + 채도 증가 */
+  -webkit-backdrop-filter: saturate(180%) blur(8px); /* 사파리용 효과 */
+}
+
+/* ul: 할 일 항목들의 리스트(ul) 스타일 */
+ul {
+  list-style: none; /* 기본 점(●) 제거 */
+  padding: 0; /* 안쪽 여백 제거 */
+  margin: 0; /* 바깥 여백 제거 */
+  display: flex; /* flexbox 사용 */
+  flex-direction: column; /* 세로로 나열 */
+  gap: 16px; /* 항목 사이 간격 */
+}
